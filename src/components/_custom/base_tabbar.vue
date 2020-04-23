@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import cyBadge from "@/components/badge";
+import cyBadge from "@/components/_global/badge";
 export default {
     name: "base_tabbar",
     components: {

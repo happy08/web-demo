@@ -163,7 +163,7 @@ export default {
                     item.className != "cy-swiper-slide cy-swiper-slide-selected"
                 ) {
                     var dom = document.createElement("div");
-                    //jd 图片占位图)
+                    //图片占位图
                     if (this.lazyLoadUrl) {
                         dom.style.backgroundImage = `url('${this.lazyLoadUrl}')`;
                         dom.className = "cy-lazy img";

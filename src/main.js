@@ -8,7 +8,7 @@ import utils from './utils/index' // 工具函数
 import './utils/directive/index' // 自定义指令
 import './utils/rem'
 
-import "./components/plugin"
+import "./components/_global/plugin"
 import './components/_global.js' // 公共全局组件
 import './components/_custom' // 自定义组件
 

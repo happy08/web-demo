@@ -2,7 +2,7 @@ import axios from 'axios'
 import qs from 'qs'
 import router from '@/router'
 import localStorage from '@/utils/localStorage'
-import toast from "@/components/toast"
+import toast from "@/components/_global/toast"
 
 // 创建axios实例
 let instance = axios.create({

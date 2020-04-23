@@ -2,40 +2,10 @@
  * @description 表单验证
 */
 import schema from "async-validator";
-import Toast from "@/components/toast";
-import { dialog } from "@/components/dialog";
+import Toast from "@/components/_global/toast";
+import { dialog } from "@/components/_global/dialog";
 
-export const regular = {
-    // 银行卡号码
-    bankCard: /^[1-9]\d{9,19}$/,
-    bankCardMsg: '请输入正确的银行卡号码',
-
-    // 6到12位的英文字符和数字
-    length6to12: /^[0-9a-zA-Z_]{6,12}$/,
-    length6to12Msg: '6-12位的英文字符和数字',
-
-    //自定义长度
-    length: (rule, value, callback) => {
-        const reg = new RegExp("^[0-9a-zA-Z]{" + rule.min + "," + rule.max + "}$", "gim");
-        if (!value || !reg.test(value)) {
-            return callback(new Error(`${rule.lable}长度${rule.min}-${rule.max}`));
-        } else {
-            callback();
-        }
-    },
-
-    //自定义规则
-    regularOrder: (rule, value, callback) => {
-        if (parseInt(value) > 255) {
-            return callback(new Error(`${rule.lable}数值不大于255`));
-        } else {
-            callback();
-        }
-    }
-}
-
-
-export const validator = (option) => {
+const validator = (option) => {
     return new Promise((resolve, reject) => {
         let data = option.data || {},
             rules = option.rules || {},
@@ -68,4 +38,37 @@ export const validator = (option) => {
 
     })
 }
+
+/**
+ * @description 提交表单 + 验证
+ * @param option
+*/
+//import { validator } from "./validator";
+//import Toast from "@/components/_global/toast";
+
+const submit = (option) => {
+    const data = option.data || {},
+        api = option.api
+    return new Promise((resolve, reject) => {
+        validator(option)
+            .then(() => {
+                Toast.loading("加载中…")
+                console.log('data', data);
+                api(data)
+                    .then(res => {
+                        Toast.success("成功")
+                        !!res && resolve(res)
+                    })
+                    .catch(err => { //接口报错
+                        Toast.fail("发送失败");
+                        reject(err)
+                    })
+            })
+            .catch(() => { //有提示信息时的 取消 on cancel
+                reject()
+            })
+    })
+}
+
+export default submit
 

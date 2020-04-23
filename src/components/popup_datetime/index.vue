@@ -1,11 +1,11 @@
 <template>
-    <div
-        class="weui-cell__ft vux-cell-primary vux-datetime-value"
+    <div style="display:none"
+        class="weui-cell__ft cy-cell-primary cy-datetime-value"
         :style="{textAlign: valueTextAlign}"
     >
-        <span class="vux-cell-placeholder" v-if="!currentValue && placeholder">{{ placeholder }}</span>
+        <span class="cy-cell-placeholder" v-if="!currentValue && placeholder">{{ placeholder }}</span>
         <span
-            class="vux-cell-value"
+            class="cy-cell-value"
             v-if="currentValue"
         >{{ displayFormat ? displayFormat(currentValue) : currentValue }}</span>
     </div>
@@ -13,7 +13,6 @@
 
 <script>
 import Picker from "./datetimepicker";
-
 import format from "./format";
 
 export default {
@@ -147,7 +146,7 @@ export default {
     },
     mounted() {
         const uuid = this.uuid;
-        this.$el.setAttribute("id", `vux-datetime-${uuid}`);
+        this.$el.setAttribute("id", `cy-datetime-${uuid}`);
         if (!this.readonly) {
             this.$nextTick(() => {
                 this.render();
@@ -174,10 +173,10 @@ export default {
         pickerOptions() {
             const _this = this;
             const options = {
-                trigger: "#vux-datetime-" + this.uuid,
+                trigger: "#cy-datetime-" + this.uuid,
                 format: this.format,
                 value: this.currentValue,
-                output: ".vux-datetime-value",
+                output: ".cy-datetime-value",
                 confirmText: _this.getButtonText("confirm"),
                 cancelText: _this.getButtonText("cancel"),
                 clearText: _this.clearText,
@@ -247,7 +246,7 @@ export default {
                 return {};
             }
             return {
-                "vux-cell-justify":
+                "cy-cell-justify":
                     this.$parent.labelAlign === "justify" ||
                     this.$parent.$parent.labelAlign === "justify"
             };
@@ -341,7 +340,7 @@ export default {
 @import "../../assets/css/_variable";
 
 .dp-container {
-    &.vux-datetime-view {
+    &.cy-datetime-view {
         position: static;
         transition: none;
         & .dp-header {
@@ -350,7 +349,7 @@ export default {
     }
 }
 
-.vux-datetime-clear {
+.cy-datetime-clear {
     text-align: center;
 }
 
@@ -426,22 +425,22 @@ export default {
     box-sizing: border-box;
     flex: 1;
 }
-.vux-datetime-cancel {
+.cy-datetime-cancel {
     text-align: left;
     padding-left: 15px;
 }
-.vux-datetime-confirm {
+.cy-datetime-confirm {
     text-align: right;
     padding-right: 15px;
 }
-.vux-datetime {
+.cy-datetime {
     color: #000;
     text-decoration: none;
 }
-.vux-datetime .vux-input-icon {
+.cy-datetime .cy-input-icon {
     float: right;
 }
-.vux-cell-primary {
+.cy-cell-primary {
     flex: 1;
 }
 </style>

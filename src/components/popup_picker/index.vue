@@ -29,7 +29,7 @@
 
 <script>
 import Picker from "../picker";
-import Popup from "../popup";
+import Popup from "../_global/popup";
 import PopupHeader from "../popup_header";
 import value2name from "../../utils/value2name";
 

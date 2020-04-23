@@ -23,8 +23,60 @@ const routes = [
       title: "首页"
     }
   },
- 
-
+  {
+    path: '/auth',
+    name: 'auth',
+    component: () => import(/* webpackChunkName: "auth" */ '@/views/auth/index.vue'),
+    meta: {
+      index: 0,
+      title: "登录"
+    }
+  },
+  // {
+  //   path: '/reg',
+  //   name: 'reg',
+  //   component: () => import(/* webpackChunkName: "auth" */ '@/views/auth/reg.vue'),
+  //   meta: {
+  //     index: 1,
+  //     title: "加入车内大健康"
+  //   }
+  // },
+  {
+    path: '/equipment',
+    name: 'equipment',
+    component: () => import(/* webpackChunkName: "equipment" */ '@/views/equipment/index.vue'),
+    meta: {
+      index: 1,
+      title: "激活设备"
+    }
+  },
+  {
+    path: '/equipment_share',
+    name: 'equipment_share',
+    component: () => import(/* webpackChunkName: "equipment" */ '@/views/equipment/share.vue'),
+    meta: {
+      index: 1,
+      title: "邀请同事加入"
+    }
+  },
+  {
+    path: '/mydata',
+    name: 'mydata',
+    component: () => import(/* webpackChunkName: "mydata" */ '@/views/mydata/index.vue'),
+    meta: {
+      index: 1,
+      title: "订阅"
+    }
+  },
+  {
+    path: '/subscribe',
+    name: 'subscribe',
+    component: () => import(/* webpackChunkName: "subscribe" */ '@/views/subscribe/index.vue'),
+    meta: {
+      index: 1,
+      title: "订阅"
+    }
+  },
 ]
 
 

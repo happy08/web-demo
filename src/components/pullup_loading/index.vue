@@ -16,7 +16,7 @@
     </div>
 </template>
 <script>
-import cyLoading from "../loading";
+import cyLoading from "../_global/loading";
 
 export default {
     name: "cy-pullup-loading",

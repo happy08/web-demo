@@ -16,8 +16,8 @@
 
 <script>
 import Scroller from "./scroller.js";
-import cyRow from "../row";
-import cyCol from "../row/col";
+import cyRow from "../_global/row";
+import cyCol from "../_global/row/col";
 import Manager from "./chain";
 import value2name from "../../utils/value2name";
 import { isArray } from "../../utils/isDataType";

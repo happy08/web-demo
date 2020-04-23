@@ -8,9 +8,9 @@ const MASK_TEMPLATE = '<div class="dp-mask"></div>'
 
 const TEMPLATE = `<div class="dp-container">
   <div class="dp-header">
-    <div class="dp-item dp-left vux-datetime-cancel" data-role="cancel">cancel</div>
-    <div class="dp-item vux-datetime-clear" data-role="clear"></div>
-    <div class="dp-item dp-right vux-datetime-confirm" data-role="confirm">done</div>
+    <div class="dp-item dp-left cy-datetime-cancel" data-role="cancel">cancel</div>
+    <div class="dp-item cy-datetime-clear" data-role="clear"></div>
+    <div class="dp-item dp-right cy-datetime-confirm" data-role="confirm">done</div>
   </div>
   <div class="dp-content">
     <div class="dp-item" data-role="year"></div>
@@ -181,7 +181,7 @@ DatetimePicker.prototype = {
     //self.container.style.display = 'block'
 
     if (this.renderInline) {
-      self.container.classList.add('vux-datetime-view')
+      self.container.classList.add('cy-datetime-view')
     }
 
     each(TYPE_MAP, function (type) {
@@ -202,7 +202,7 @@ DatetimePicker.prototype = {
     const self = this
     const config = self.config
     if (config.isOneInstance) {
-      if (document.querySelector('#vux-datetime-instance')) {
+      if (document.querySelector('#cy-datetime-instance')) {
         return
       }
       self.willShow = true
@@ -226,7 +226,7 @@ DatetimePicker.prototype = {
 
       const container = self.container = toElement(template)
       if (config.isOneInstance) {
-        container.id = 'vux-datetime-instance'
+        container.id = 'cy-datetime-instance'
       }
       if (!self.renderInline) {
         document.body.appendChild(container)

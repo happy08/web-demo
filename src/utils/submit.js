@@ -2,8 +2,8 @@
  * @description 提交表单 + 验证
  * @param option
 */
-import { regular, validator } from "./validator";
-import Toast from "@/components/toast";
+import { validator } from "./validator";
+import Toast from "@/components/_global/toast";
 
 const submit = (option) => {
     const data = option.data || {},

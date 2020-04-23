@@ -1,7 +1,7 @@
 import vue from 'vue'
 
 const requireComponent = require.context( // webpack的api，匹配文件
-    '.', // 当前目录下的文件 相对路径)
+    './_global', // 当前目录下的文件 相对路径)
     true, // 查子文件
     /index.vue$/ // 匹配方式正则表达式，只查看后缀为.vue的文件
 )
@@ -19,6 +19,7 @@ requireComponent.keys().forEach((fileName) => {
         //.split('./')
         .split()
         .join('')
+    
     console.log(`cy-${componentName}`, '基础组件')
     // 组件全局注册
     vue.component(`cy-${componentName}`, componentConfig.default || componentConfig)

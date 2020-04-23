@@ -16,6 +16,7 @@ module.exports = {
             }
         }
     },
+
     //关闭eslint
     lintOnSave: false,
     //打包去掉map文件
