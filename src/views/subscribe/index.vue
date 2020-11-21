@@ -70,10 +70,10 @@ export default {
         // },
         onSubmit() {
             this.disabled = true;
-            this.$toast("订阅成功，即将跳转去查看运营数据");
-            setTimeout(()=>{
-                this.$router.push("equipment")
-            },2000)
+            this.$toast("订阅成功，即将跳转去查看运营数据!");
+            setTimeout(() => {
+                this.$router.push("equipment");
+            }, 2000);
         }
     }
 };
