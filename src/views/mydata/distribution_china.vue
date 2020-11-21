@@ -3,7 +3,7 @@
     <div class="distribution">
         <div class="head pdt-15 pdb-30 bg-darkblue white">
             <div class="flex vcenter between">
-                <span class="pdl-20 fs-26">客户/门店分布</span>
+                <span class="pdl-20 fs-26">客户/门店分布1</span>
                 <span class="pdt-10 pdr-5 fs-12">(2020/02/12~2020/02/12)</span>
             </div>
 
