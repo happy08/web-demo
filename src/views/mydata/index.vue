@@ -9,7 +9,7 @@
         >
             <div ref="data0" class="pdt-15 pdb-30 bg-darkblue white">
                 <div class="flex vcenter between">
-                    <span class="pdl-20 fs-26">我的数据</span>
+                    <span class="pdl-20 fs-26">我的数据1</span>
                     <span class="right-btn" @click="$router.push('subscribe')">
                         修改订阅
                         <cy-icon type="right" size="12px"></cy-icon>
@@ -121,7 +121,7 @@ export default {
 
             //const offsetTop = document.querySelector(".data" + v).getBoundingClientRect().top
             this.$nextTick(() => {
-               //console.log("v", this.$refs, this.$refs.data1.offsetTop);
+                //console.log("v", this.$refs, this.$refs.data1.offsetTop);
                 this.$refs["data" + v].scrollIntoView({
                     behavior: "smooth",
                     block: "start",
