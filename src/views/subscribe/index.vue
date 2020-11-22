@@ -2,7 +2,7 @@
 <template>
     <div class="subscribe">
         <cy-cell title="全部" class="pdtb-15">
-            <div slot="sub-title" class="fs-12">订阅所有数据</div>
+            <div slot="sub-title" class="fs-12">订阅所有数据dev</div>
             <cy-switch v-model="all" slot="desc"></cy-switch>
         </cy-cell>
         <cy-cell title="汇总数据" titleIcon="papers" class="pdtb-15">
@@ -71,9 +71,9 @@ export default {
         onSubmit() {
             this.disabled = true;
             this.$toast("订阅成功，即将跳转去查看运营数据");
-            setTimeout(()=>{
-                this.$router.push("equipment")
-            },2000)
+            setTimeout(() => {
+                this.$router.push("equipment");
+            }, 2000);
         }
     }
 };
