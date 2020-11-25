@@ -2,7 +2,11 @@
 <template>
     <div class="subscribe">
         <cy-cell title="全部" class="pdtb-15">
+<<<<<<< Updated upstream
             <div slot="sub-title" class="fs-12">订阅所有数据dev1</div>
+=======
+            <div slot="sub-title" class="fs-12">订阅所有数据13</div>
+>>>>>>> Stashed changes
             <cy-switch v-model="all" slot="desc"></cy-switch>
         </cy-cell>
         <cy-cell title="汇总数据" titleIcon="papers" class="pdtb-15">
